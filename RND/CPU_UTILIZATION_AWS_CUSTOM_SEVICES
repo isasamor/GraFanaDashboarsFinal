@@ -1,0 +1,171 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 180,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus-aws",
+      "description": "",
+      "fill": 1,
+      "fillGradient": 1,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 2,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "aws_ec2_cpuutilization_average{instance_id=\"i-0dca3e6fa748d5794\"}",
+          "interval": "5m",
+          "legendFormat": "etl-4",
+          "refId": "A"
+        },
+        {
+          "expr": "aws_ec2_cpuutilization_average{instance_id=\"i-0edac93e243858331\"}",
+          "interval": "5m",
+          "legendFormat": "etl-3",
+          "refId": "B"
+        },
+        {
+          "expr": "aws_ec2_cpuutilization_average{instance_id=\"i-0b40c6bfa83bf96e9\"}",
+          "interval": "5m",
+          "legendFormat": "etl-2",
+          "refId": "C"
+        },
+        {
+          "expr": "aws_ec2_cpuutilization_average{instance_id=\"i-0925fe3d81ef1d7c4\"}",
+          "interval": "5m",
+          "legendFormat": "etl-1",
+          "refId": "D"
+        },
+        {
+          "expr": "aws_ec2_cpuutilization_average{instance_id=\"i-066cea408222990d6\"}",
+          "interval": "5m",
+          "legendFormat": "400",
+          "refId": "E"
+        },
+        {
+          "expr": "aws_ec2_cpuutilization_average{instance_id=\"i-07be77072f1fe7647\"}",
+          "interval": "5m",
+          "legendFormat": "Aggregations",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU Utilization Per Machine",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "schemaVersion": 21,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "CPU Utilization Per Machine",
+  "uid": "gK58YgwWz",
+  "version": 4
+}
